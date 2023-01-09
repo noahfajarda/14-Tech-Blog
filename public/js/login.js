@@ -1,28 +1,26 @@
-
 // Frontend JS for login page, this is loaded via the script tag in the login.handlebars file
-const loginFormHandler = async function(event) {
-  event.preventDefault();
+const loginFormHandler = async function (event) {
+    event.preventDefault();
 
-  const usernameEl = document.querySelector('#username-input-login');
-  const passwordEl = document.querySelector('#password-input-login');
+    const usernameEl = document.querySelector("#username-input-login");
+    const passwordEl = document.querySelector("#password-input-login");
 
-  const response = await fetch('/api/user/login', {
-    method: 'POST',
-    body: JSON.stringify({
-      username: usernameEl.value,
-      password: passwordEl.value,
-    }),
-    headers: { 'Content-Type': 'application/json' },
-  });
+    const response = await fetch("/api/user/login", {
+        method: "POST",
+        body: JSON.stringify({
+            username: usernameEl.value,
+            password: passwordEl.value,
+        }),
+        headers: { "Content-Type": "application/json" },
+    });
 
-  if (response.ok) {
-    document.location.replace('/dashboard');
-  } else {
-    alert('Failed to login');
-  }
+    if (response.ok) {
+        document.location.replace("/dashboard");
+    } else {
+        alert("Failed to login");
+    }
 };
 
 document
-  .querySelector('#login-form')
-  .addEventListener('submit', loginFormHandler);
-
+    .querySelector("#login-form")
+    .addEventListener("submit", loginFormHandler);
