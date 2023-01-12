@@ -3,6 +3,7 @@
 //use this middleware function on any routes that require a user to be logged in to access
 const withAuth = (req, res, next) => {
     if (!req.session.userId) {
+        console.log("BLOCKED");
         res.redirect("/login");
     } else {
         next();

@@ -11,17 +11,17 @@ const withAuth = require("../utils/auth");
 router.get("/", withAuth, async (req, res) => {
     // TODO - retrieve all posts from the database for the logged in user
     const postsData = await Post.findAll({
-        where: {userId:req.session.userId},
+        where: { userId: req.session.userId },
         order: [["createdAt", "DESC"]],
         include: [
             {
                 model: User,
-                attributes: ["username"]
-            }
-        ]
+                attributes: ["username"],
+            },
+        ],
     });
-    const posts = postsData.map(post => post.get({plain:true}))
-    console.log(posts)
+    const posts = postsData.map((post) => post.get({ plain: true }));
+    console.log(posts);
     res.render("admin-all-posts", { layout: "dashboard", posts });
     // refer to admin-all-posts.handlebars write the code to display the posts
 });
@@ -45,8 +45,14 @@ router.post("/create", withAuth, async (req, res) => {
 });
 // TODO - create logic for the GET route for /new that renders the new post page
 // It should display a form for creating a new post
+router.get("/new", withAuth, async (req, res) => {
+    res.render("admin-new-post", { layout: "dashboard" });
+});
 
 // TODO - create logic for the GET route for /edit/:id that renders the edit post page
 // It should display a form for editing an existing post
+router.get("/edit/:id", withAuth, async (req, res) => {
+    console.log("test");
+});
 
 module.exports = router;
