@@ -11,7 +11,7 @@ Post.init(
     {
         sequelize,
         freezeTableName: true,
-        modelName: "post",
+        modelName: "Post",
     }
 );
 

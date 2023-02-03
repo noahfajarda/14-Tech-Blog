@@ -26,29 +26,24 @@ router.post("/", async (req, res) => {
 // POST /api/users/login is a login route for an existing user
 router.post("/login", async (req, res) => {
     try {
-        // finds a user
         const user = await User.findOne({
             where: {
                 username: req.body.username,
             },
         });
 
-        // error if no user found
         if (!user) {
             res.status(400).json({ message: "No user account found!" });
             return;
         }
 
-        // check password against the db password
         const validPassword = user.checkPassword(req.body.password);
 
-        // error if invalid password
         if (!validPassword) {
             res.status(400).json({ message: "No user account found!" });
             return;
         }
 
-        // save that the user login state & user credentials in 'session'
         req.session.save(() => {
             req.session.userId = user.id;
             req.session.username = user.username;

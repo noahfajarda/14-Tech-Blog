@@ -1,6 +1,41 @@
 {{! TODO - write the template to show all the user's posts on the /dashboard route }}
-<a href="/dashboard/create">Create Post</a>
-<h1>My Posts</h1>
-{{#each posts}}
-{{> post this}}
-{{/each}}
+
+<div id="post-button-container">
+    <button type="submit" class="btn" id="new-post-button">Create new post</button>
+</div>
+
+<h1>This is the dashboard main page that should display all of a users posts</h1>
+
+{{#if posts}}
+    {{#each posts}}
+
+        {{!-- {{#each posts}}
+{{> post this}} --}}
+        <p id="post-ID">{{id}}</p>
+        <br />
+        <a href="/post/{{id}}">{{title}}</a>
+        <br />
+        {{body}}
+        <br />
+        {{format_date createdAt}}
+        <br />
+        {{format_date updatedAt}}
+        <br />
+        {{userId}}
+        <br />
+        {{User.username}}
+        <br />
+        <a href="/dashboard/edit/{{id}}">Modify Post</a>
+        <button id="deleted-post-submit">Delete Post</button>
+        <br />
+        <br />
+        <br />
+        <br />
+
+    {{/each}}
+{{else}}
+    <h1>You have no posts yet! Make a post dummy!</h1>
+{{/if}}
+
+<script src="/js/my-posts-page.js"></script>
+<script src="/js/delete-post.js"></script>

@@ -1,12 +1,18 @@
-<style>
-    .post { border: 1px solid #ccc; padding: 10px; margin: 10px; border-radius:
-    10px; } .post h2 { color: blue; }
-</style>
-
-{{! refer to  https://dribbble.com/signup/new for styling}}
-<div class="post">
-    <a href="/post/{{id}}"><h2>{{title}}</h2></a>
-    <p>{{body}}</p>
-    <p>Posted by <strong>{{user.username}}</strong></p>
-    <p>Posted on {{format_date createdAt}}</p>
-</div>
+<p id="post-ID">{{id}}</p>
+<br />
+<a href="/post/{{id}}">{{title}}</a>
+<br />
+{{body}}
+<br />
+{{format_date createdAt}}
+<br />
+{{format_date updatedAt}}
+<br />
+{{userId}}
+<br />
+{{User.username}}
+<br />
+<br />
+<br />
+<br />
+<br />

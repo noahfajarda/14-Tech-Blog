@@ -1,1 +1,46 @@
 /* TODO - Write your CSS here */
+li {
+    color: red;
+    text-decoration: none;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+title {
+    text-align: center;
+}
+
+#main-title,
+.title-page,
+#dashboard {
+    text-align: center;
+}
+
+#login-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#signup-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.form-El {
+    display: flex;
+    justify-content: space-between;
+}
+
+#post-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

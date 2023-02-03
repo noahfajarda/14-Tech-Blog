@@ -1,7 +1,7 @@
-{{! TODO - write the template to show all posts on the / route }}
-<h1>test</h1>
-{{! <h1 style="color:blue">Stephen Curry!!🔥</h1> }}
-<h1>ALL POSTS</h1>
-{{#if username}}
-    <p>Hello, {{username}}</p>
-{{/if}}
+
+{{!-- TODO - write the template to show all posts on the / route --}}
+<h1>This is the home page that displays posts of all users</h1>
+
+{{#each posts as |post|}}
+    {{>post post}}
+{{/each}}

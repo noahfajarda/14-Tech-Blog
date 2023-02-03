@@ -1,0 +1,42 @@
+TEST!! shawty!!
+
+<br />
+{{singlePost.title}}
+<br />
+{{singlePost.body}}
+<br />
+{{format_date singlePost.createdAt}}
+<br />
+{{format_date singlePost.updatedAt}}
+<br />
+{{singlePost.userId}}
+<br />
+{{singlePost.User.id}}
+<br />
+{{singlePost.User.username}}
+<br />
+
+<h1>Update Existing Post:</h1>
+<h3>Post ID:</h3>
+<p id="post-ID">{{singlePost.id}}</p>
+<br />
+<h2>Update Your Title For Your Post:</h2>
+<textarea
+    name="updated-post-title"
+    id="updated-post-title"
+    cols="30"
+    rows="1"
+></textarea>
+<h2>What Would You Like To Say That's New?:</h2>
+<textarea
+    name="updated-post-content"
+    id="updated-post-content"
+    cols="30"
+    rows="10"
+></textarea>
+
+<button id="updated-post-submit">Update Post</button>
+<button id="deleted-post-submit">Delete Post</button>
+
+<script src="/js/delete-post.js"></script>
+<script src="/js/update-post-page.js"></script>
