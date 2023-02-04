@@ -1,7 +1,7 @@
-/* TODO - Write your CSS here */
 li {
     color: red;
     text-decoration: none;
+    list-style-type: none;
 }
 
 ul {
