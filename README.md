@@ -6,4 +6,4 @@ This project is an attempt to create a program that will allow users to create a
 
 # Walkthrough Demos
 
-[Walkthrough Videos](https://github.com/noahfajarda/14-Tech-Blog/blob/main/assets/Screenshot%202023-02-06%20at%208.27.43%20AM.png)
+![App Screenshot](https://github.com/noahfajarda/14-Tech-Blog/blob/main/assets/Screenshot%202023-02-06%20at%208.27.43%20AM.png)
