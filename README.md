@@ -1,4 +1,4 @@
-# 14-Tech-BLog
+# 14-Tech-Blog
 
 ## Description
 
